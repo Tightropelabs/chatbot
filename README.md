@@ -1,4 +1,3 @@
-"# chatbot" 
 # Get Started With Tightrope Chatbots
 Tightrope's chat functionality is built on BotPress, an open-source chatbot project that enables the development of intelligent and flexible chatbots. You can read more about BotPress on [their website](https://botpress.io) or [their GitHub](https://github.com/botpress/botpress).
 
