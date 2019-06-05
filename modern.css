@@ -117,7 +117,7 @@ div:has(> .css-10nd86i) {
   }
 }
 
-@media only screen and (max-device-width : 900px) {
+/* @media only screen and (max-device-width : 900px) {
   .bpw-from-bot .bpw-chat-bubble {
     font-size: 20px;
   }
@@ -133,9 +133,9 @@ div:has(> .css-10nd86i) {
   .bpw-send-button {
     font-size: 17px;
   }
-}
+} */
 
-@media only screen and (max-device-width : 640px) {
+/* @media only screen and (max-device-width : 640px) {
   .bpw-header-icon i svg{
     transform: scale(2.75);
   }
@@ -177,4 +177,4 @@ div:has(> .css-10nd86i) {
   .bpw-send-button {
     font-size: 32px;
   }
-}
+} */
