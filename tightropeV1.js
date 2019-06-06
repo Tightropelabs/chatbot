@@ -74,6 +74,9 @@ function init(config) {
         sendEvent({
            type: 'show' 
         })
+        sendEvent({
+          type: 'proactive-trigger', platform: 'web', text: 'smth' 
+       })
       }
     }
   })
