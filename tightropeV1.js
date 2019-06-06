@@ -60,7 +60,7 @@ function init(config) {
       brokerage: brokerageId
     }
   })
- }, 5000);
+ }, 1000);
 }
 
 window.botpressWebChat = { init: init }
