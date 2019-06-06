@@ -17,16 +17,6 @@ window.addEventListener('message', function(payload) {
   document.querySelector('#bp-widget').setAttribute('class', data.value)
 })
 
-function setBrokerageId(brokerageId) {
-  sendEvent({
-    type: 'set-brokerage',
-    channel: 'web',
-    payload: {
-      brokerage: brokerageId
-    }
-  })
-}
-
 function init(config) {
   const host = config.host || 'https://tightropechat.herokuapp.com'
   const botId = config.botId || 'learning'
