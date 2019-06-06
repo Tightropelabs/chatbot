@@ -45,6 +45,13 @@ function init(config) {
       action: 'configure',
       payload: payload
     }, '*')
+    iframeWindow.postMessage({
+      action: 'event',
+      payload: {
+        type: 'proactive-trigger',
+        channel: 'web'
+      }
+    })
   }
 
   function sendEvent(payload) {
