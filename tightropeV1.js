@@ -40,17 +40,6 @@ function init(config) {
 
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
-
-  window.addEventListener('message', message => {
-    if (message.data.userId) {
-      const userId = message.data.userId;
-      const preId = userId.substr(0,21);
-      const postId = userId.slice(-brokerageId.length);
-      if(postId !== brokerageId) {
-        config.userId = preId + brokerageId;
-        configure(config)
-      }
-    }
   })
   
   window.addEventListener('message', message => {
