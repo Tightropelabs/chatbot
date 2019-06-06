@@ -72,9 +72,6 @@ function init(config) {
         config.userId = preId + brokerageId;
         configure(config)
         sendEvent({
-           type: 'show' 
-        })
-        sendEvent({
           type: 'proactive-trigger', platform: 'web', text: 'smth' 
        })
       }
