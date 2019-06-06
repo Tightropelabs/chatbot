@@ -71,7 +71,6 @@ function init(config) {
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
         configure(config)
-        bp.convo.start(event)
       }
     }
   })
