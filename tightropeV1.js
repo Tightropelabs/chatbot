@@ -62,13 +62,6 @@ function init(config) {
   window.botpressWebChat.sendEvent = sendEvent
   window.addEventListener('message', message => {
     if (message.data.userId) {
-      sendEvent({
-        type: 'set-brokerage',
-        channel: 'web',
-        payload: {
-          brokerage: brokerageId
-        }
-      })
       const userId = message.data.userId;
       const preId = userId.substr(0, 21);
       const postId = userId.slice(-brokerageId.length);
