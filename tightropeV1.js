@@ -52,6 +52,18 @@ function init(config) {
       }
     }
   })
+  
+  window.addEventListener('message', message => {
+    if (message.data.userId) {
+      const userId = message.data.userId;
+      const preId = userId.substr(0,21);
+      const postId = userId.slice(-brokerageId.length);
+      if(postId !== brokerageId) {
+        config.userId = preId + brokerageId;
+        configure(config)
+      }
+    }
+  }
 
   setTimeout(function(){sendEvent({
     type: 'set-brokerage',
