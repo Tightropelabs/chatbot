@@ -118,18 +118,7 @@ div:has(> .css-10nd86i) {
     bottom: 20px;
     height: 75% !important;
     border-radius: 20px;
-  }
-  .bpw-header-container {
-    border-top: none;
-    padding-left: 20px;
-  }
-  
-  .bpw-msg-list-container {
-    padding-left: 20px;
-  }
-  
-  .bpw-keyboard {
-    padding-left: 20px;
+    margin-left: 20px;
   }
 }
 
