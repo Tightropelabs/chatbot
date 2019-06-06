@@ -64,6 +64,9 @@ function init(config) {
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
         configure(config)
+        setTimeout(sendEvent({
+          type: 'proactive-trigger', platform: 'web', text: 'smth' 
+       }), 3000)
       }
     }
   })
