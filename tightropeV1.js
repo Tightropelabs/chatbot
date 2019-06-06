@@ -52,10 +52,6 @@ function init(config) {
       action: 'event',
       payload: payload
     }, '*')
-
-  setTimeout(sendEvent({
-      type: 'proactive-trigger', platform: 'web', text: 'smth' 
-   }), 3000)
   }
 
   window.botpressWebChat.configure = configure
