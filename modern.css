@@ -112,15 +112,24 @@ div:has(> .css-10nd86i) {
 }
 
 @media only screen and (min-device-width : 900px) {
-  .bp-widget-side {
+  .bpw-chat-container {
     top: auto;
-    bottom: 30px;
-    right: 30px;
+    right: 20px;
+    bottom: 20px;
     height: 75% !important;
+    border-radius: 20px;
   }
   .bpw-header-container {
     border-top: none;
+    margin-left: 20px;
 }
+  .bpw-msg-list-container {
+    margin-left: 20px;
+  }
+  
+  .bpw-keyboard {
+    margin-left: 20px;
+  }
 
 /* @media only screen and (max-device-width : 900px) {
   .bpw-from-bot .bpw-chat-bubble {
