@@ -71,10 +71,6 @@ function init(config) {
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
         configure(config)
-        sendEvent({
-          type: 'force-convo',
-          channel: 'web'
-        })
       }
     }
   })
