@@ -1,7 +1,7 @@
 function injectDOMElement(tagName, targetSelector, options) {
   const element = document.createElement(tagName)
   if (options) {
-    Object.keys(options).forEach(function(key) {
+    Object.keys(options).forEach(function (key) {
       element[key] = options[key]
     })
   }
@@ -9,7 +9,7 @@ function injectDOMElement(tagName, targetSelector, options) {
   return element
 }
 
-window.addEventListener('message', function(payload) {
+window.addEventListener('message', function (payload) {
   const data = payload.data
   if (!data || !data.type || data.type !== 'setClass') {
     return
@@ -23,44 +23,61 @@ function init(config) {
   const brokerageId = config.brokerageId || ''
   config.extraStylesheet = config.extraStylesheet || 'https://tightropelabs.github.io/chatbot/modern.css'
   const cssHref = config.botIframeStylesheet || 'https://tightropelabs.github.io/chatbot/iframe.css'
-  injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref })
+  injectDOMElement('link', 'head', {
+    rel: 'stylesheet',
+    href: cssHref
+  })
 
-  const options = encodeURIComponent(JSON.stringify({ config: config }))
+  const options = encodeURIComponent(JSON.stringify({
+    config: config
+  }))
   const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded&options=' + options
   const iframeHTML = '<iframe id="bp-widget" frameborder="0" src="' + iframeSrc + '" class="bp-widget-web"/>'
-  injectDOMElement('div', 'body', { id: 'bp-web-widget', innerHTML: iframeHTML })
+  injectDOMElement('div', 'body', {
+    id: 'bp-web-widget',
+    innerHTML: iframeHTML
+  })
 
   const iframeWindow = document.querySelector('#bp-web-widget > #bp-widget').contentWindow
+
   function configure(payload) {
-    iframeWindow.postMessage({ action: 'configure', payload: payload }, '*')
+    iframeWindow.postMessage({
+      action: 'configure',
+      payload: payload
+    }, '*')
   }
+
   function sendEvent(payload) {
-    iframeWindow.postMessage({ action: 'event', payload: payload }, '*')
+    iframeWindow.postMessage({
+      action: 'event',
+      payload: payload
+    }, '*')
   }
 
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
-  })
-  
-  window.addEventListener('message', message => {
-    if (message.data.userId) {
-      const userId = message.data.userId;
-      const preId = userId.substr(0,21);
-      const postId = userId.slice(-brokerageId.length);
-      if(postId !== brokerageId) {
-        config.userId = preId + brokerageId;
-        configure(config)
-        sendEvent({
-          type: 'set-brokerage',
-          channel: 'web',
-          payload: {
-            brokerage: brokerageId
-          }
-        })
-       }
+}
+
+window.addEventListener('message', message => {
+  if (message.data.userId) {
+    sendEvent({
+      type: 'set-brokerage',
+      channel: 'web',
+      payload: {
+        brokerage: brokerageId
       }
+    })
+    const userId = message.data.userId;
+    const preId = userId.substr(0, 21);
+    const postId = userId.slice(-brokerageId.length);
+    if (postId !== brokerageId) {
+      config.userId = preId + brokerageId;
+      configure(config)
     }
   }
+})
 
 
-window.botpressWebChat = { init: init }
+window.botpressWebChat = {
+  init: init
+}
