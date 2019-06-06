@@ -51,6 +51,7 @@
     right 20px;
     height: 75%;
   }
+}
 
 @media only screen and (max-device-width: 768px) {
   .bp-widget-side {
