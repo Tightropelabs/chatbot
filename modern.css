@@ -41,10 +41,16 @@ a {
 
 .bpw-header-container {
   font-family: 'Poppins', sans-serif;
+  border-top: none;
+}
+
+.bpw-layout {
+  border-left: none;
 }
 
 .bpw-chat-container {
   background-color: #fff;
+  border-left: none;
 }
 
 .bpw-date-container {
