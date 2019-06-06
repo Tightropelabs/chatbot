@@ -72,11 +72,7 @@ function init(config) {
         config.userId = preId + brokerageId;
         configure(config)
         sendEvent({
-          type: 'set-brokerage',
-          channel: 'web',
-          payload: {
-            brokerage: brokerageId
-          }
+           type: 'show' 
         })
       }
     }
