@@ -112,9 +112,14 @@ div:has(> .css-10nd86i) {
 }
 
 @media only screen and (min-device-width : 900px) {
-  .bpw-layout {
-    max-height: 750px;
+  .bp-widget-side {
+    top: auto;
+    bottom: 30px;
+    right: 30px;
+    height: 75%;
   }
+  .bpw-header-container {
+    border-top: none;
 }
 
 /* @media only screen and (max-device-width : 900px) {
