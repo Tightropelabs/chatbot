@@ -59,6 +59,12 @@
   .bpw-anim-fadeOut {
     animation-duration: 0s;
   }
+  .bpw-layout {
+    border-radius: 20px;
+  }  
+  .bpw-keyboard {
+    border-radius: 0px 0px 20px 20px;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
