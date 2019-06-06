@@ -64,6 +64,9 @@ function init(config) {
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
   window.addEventListener('message', message => {
+    sendEvent({
+      type: 'proactive-trigger', channel: 'web'
+    })
     if (message.data.userId) {
       sendEvent({
         type: 'set-brokerage',
@@ -78,9 +81,6 @@ function init(config) {
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
         configure(config)
-        sendEvent({
-          type: 'proactive-trigger', channel: 'web'
-        })
       }
     }
   })
