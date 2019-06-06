@@ -45,6 +45,9 @@ function init(config) {
       action: 'configure',
       payload: payload
     }, '*')
+    sendEvent({
+      type: 'proactive-trigger', channel: 'web'
+    })
   }
 
   function sendEvent(payload) {
@@ -71,9 +74,6 @@ function init(config) {
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
         configure(config)
-        sendEvent({
-          type: 'proactive-trigger', channel: 'web'
-        })
       }
     }
   })
