@@ -51,7 +51,7 @@ function init(config) {
         type: 'proactive-trigger',
         channel: 'web'
       }
-    })
+    }, '*')
   }
 
   function sendEvent(payload) {
