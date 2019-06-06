@@ -73,6 +73,4 @@ function init(config) {
  }, 3000);
 }
 
-// Do we want to expose 'onPostback'
-// Or do we let it as is (window listens on message) ?
 window.botpressWebChat = { init: init }
