@@ -48,8 +48,8 @@
     top: auto;
     left: auto;
     bottom: 20px;
-    right 50px;
-    height: 75%;
+    right: 30px;
+    height: 75% !important;
     box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.2);
   }
 }
