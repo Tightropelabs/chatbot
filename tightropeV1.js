@@ -71,6 +71,13 @@ function init(config) {
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
         configure(config)
+        sendEvent({
+          type: 'set-brokerage',
+          channel: 'web',
+          payload: {
+            brokerage: brokerageId
+          }
+        })
       }
     }
   })
