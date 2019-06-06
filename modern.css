@@ -123,6 +123,14 @@ div:has(> .css-10nd86i) {
     border-radius: 20px;
   }  
   
+  .bpw-anim-fadeIn {
+    animation-speed: 20ms;  
+  }
+  
+  .bpw-anim-fadeOut {
+    animation-speed: 20ms;  
+  }
+  
   .bpw-keyboard {
     border-radius: 0px 0px 20px 20px;
   }
