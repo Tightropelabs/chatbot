@@ -124,11 +124,11 @@ div:has(> .css-10nd86i) {
   }  
   
   .bpw-anim-fadeIn {
-    animation-speed: 20ms;  
+    animation-duration: 20ms;  
   }
   
   .bpw-anim-fadeOut {
-    animation-speed: 20ms;  
+    animation-duration: 20ms;  
   }
   
   .bpw-keyboard {
