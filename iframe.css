@@ -59,7 +59,7 @@
   }
   
   .bpw-anim-fadeOut {
-    animation-duration: 0s;
+    animation-duration: 0.1s;
   }
   
   .bpw-layout {
