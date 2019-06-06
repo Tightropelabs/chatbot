@@ -112,13 +112,8 @@ div:has(> .css-10nd86i) {
 }
 
 @media only screen and (min-device-width : 900px) {
-  .bpw-chat-container {
-    top: auto;
-    right: 20px;
-    bottom: 20px;
-    height: 75% !important;
-    border-radius: 20px;
-    margin-left: 20px;
+  .bp-web-widget {
+    max-height: 75%;
   }
 }
 
