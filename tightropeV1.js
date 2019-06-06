@@ -32,10 +32,8 @@ function init(config) {
   const botId = config.botId || 'learning'
   const brokerageId = config.brokerageId || ''
   config.extraStylesheet = config.extraStylesheet || 'https://tightropelabs.github.io/chatbot/modern.css'
-  const cssHref = host + '/assets/modules/channel-web/inject.css'
-  const cssHref2 = config.botIframeStylesheet || 'https://tightropelabs.github.io/chatbot/iframe.css'
+  const cssHref = config.botIframeStylesheet || 'https://tightropelabs.github.io/chatbot/iframe.css'
   injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref })
-  injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref2 })
 
   const options = encodeURIComponent(JSON.stringify({ config: config }))
   const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded&options=' + options
