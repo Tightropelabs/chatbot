@@ -45,9 +45,6 @@ function init(config) {
       action: 'configure',
       payload: payload
     }, '*')
-    sendEvent({
-      type: 'proactive-trigger', channel: 'web'
-    })
   }
 
   function sendEvent(payload) {
