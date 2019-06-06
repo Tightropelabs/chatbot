@@ -121,15 +121,15 @@ div:has(> .css-10nd86i) {
   }
   .bpw-header-container {
     border-top: none;
-    margin-left: 20px;
+    padding-left: 20px;
   }
   
   .bpw-msg-list-container {
-    margin-left: 20px;
+    padding-left: 20px;
   }
   
   .bpw-keyboard {
-    margin-left: 20px;
+    padding-left: 20px;
   }
 }
 
