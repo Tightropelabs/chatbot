@@ -56,6 +56,9 @@
   .bpw-anim-fadeIn {
     animation-duration: 0.1s;
   }
+  .bpw-anim-fadeOut {
+    animation-duration: 0s;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
