@@ -17,6 +17,10 @@ window.addEventListener('message', function (payload) {
   document.querySelector('#bp-widget').setAttribute('class', data.value)
 })
 
+window.botpressWebChat = {
+  init: init
+}
+
 function init(config) {
   const host = config.host || 'https://tightropechat.herokuapp.com'
   const botId = config.botId || 'learning'
@@ -73,8 +77,4 @@ function init(config) {
   })
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
-}
-
-window.botpressWebChat = {
-  init: init
 }
