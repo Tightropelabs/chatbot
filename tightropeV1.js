@@ -17,8 +17,8 @@ window.addEventListener('message', function (payload) {
   document.querySelector('#bp-widget').setAttribute('class', data.value)
 })
 
-window.botpressWebChat = {
-  init: init
+function reinit(config) {
+
 }
 
 function init(config) {
@@ -57,6 +57,10 @@ function init(config) {
       payload: payload
     }, '*')
   }
+
+  window.botpressWebChat.configure = configure
+  window.botpressWebChat.sendEvent = sendEvent
+  
   window.addEventListener('message', message => {
     if (message.data.userId) {
       window.botpressWebChat.sendEvent ({
@@ -75,6 +79,8 @@ function init(config) {
       }
     }
   })
-  window.botpressWebChat.configure = configure
-  window.botpressWebChat.sendEvent = sendEvent
+}
+
+window.botpressWebChat = {
+  init: init
 }
