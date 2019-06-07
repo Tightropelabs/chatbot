@@ -77,10 +77,3 @@ function init(config) {
     }
   })
 }
-
-
-
-
-window.botpressWebChat = {
-  init: init
-}
