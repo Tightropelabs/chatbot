@@ -53,12 +53,9 @@ function init(config) {
       payload: payload
     }, '*')
   }
-
-  window.botpressWebChat.configure = configure
-  window.botpressWebChat.sendEvent = sendEvent
   window.addEventListener('message', message => {
     if (message.data.userId) {
-      sendEvent({
+      window.botpressWebChat.sendEvent ({
         type: 'set-brokerage',
         channel: 'web',
         payload: {
@@ -74,6 +71,8 @@ function init(config) {
       }
     }
   })
+  window.botpressWebChat.configure = configure
+  window.botpressWebChat.sendEvent = sendEvent
 }
 
 window.botpressWebChat = {
