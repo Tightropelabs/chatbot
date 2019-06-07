@@ -70,13 +70,14 @@ function init(config) {
       const postId = userId.slice(-brokerageId.length);
       if (postId !== brokerageId) {
         config.userId = preId + brokerageId;
-        window.botpressWebChat = {
-          init
-        }
+        init(config)
       }
     }
   })
 }
+
+
+
 
 window.botpressWebChat = {
   init: init
