@@ -67,6 +67,8 @@ function init(config) {
         type: 'set-brokerage',
         channel: 'web',
         payload: {
+          url: window.location.href,
+          referrer: document.referrer,
           brokerage: brokerageId
         }
       })
