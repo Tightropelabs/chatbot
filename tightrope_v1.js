@@ -78,6 +78,7 @@ function init(config) {
           url: window.location.href,
           referrer: document.referrer,
           brokerage: brokerageId,
+          userAgent: navigator.userAgent,
           deviceType: device
         }
       })
