@@ -63,13 +63,22 @@ function init(config) {
   
   window.addEventListener('message', message => {
     if (message.data.userId) {
+      let device
+      if( screen.width <= 768 ) {     
+        device = "phone" 
+      } else if (screen.width = 1024) {
+        device = "tablet"
+      } else {
+        device = "laptop/desktop"
+      }
       window.botpressWebChat.sendEvent ({
         type: 'set-brokerage',
         channel: 'web',
         payload: {
           url: window.location.href,
           referrer: document.referrer,
-          brokerage: brokerageId
+          brokerage: brokerageId,
+          deviceType: device, 
         }
       })
       const userId = message.data.userId;
