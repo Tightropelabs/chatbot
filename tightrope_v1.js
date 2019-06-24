@@ -78,7 +78,7 @@ function init(config) {
           url: window.location.href,
           referrer: document.referrer,
           brokerage: brokerageId,
-          deviceType: device, 
+          deviceType: device
         }
       })
       const userId = message.data.userId;
