@@ -66,7 +66,7 @@ function init(config) {
       let device
       if( screen.width <= 768 ) {     
         device = "phone" 
-      } else if (screen.width = 1024) {
+      } else if (screen.width < 1024) {
         device = "tablet"
       } else {
         device = "laptop/desktop"
