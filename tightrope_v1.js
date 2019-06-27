@@ -23,7 +23,7 @@ function reinit(config) {
 
 function init(config) {
   const host = config.host || 'https://tightropechat.herokuapp.com'
-  const botId = config.botId || 'learning'
+  const botId = config.botId || 'tightrope'
   const brokerageId = config.brokerageId || ''
   config.extraStylesheet = config.extraStylesheet || 'https://tightropelabs.github.io/chatbot/modern.css'
   const cssHref = config.botIframeStylesheet || 'https://tightropelabs.github.io/chatbot/iframe.css'
