@@ -88,12 +88,12 @@ a {
   color: #419ef9; 
 }
 
-.bpw-keyboard-quick_reply {
-  font-size: 0.8rem;
+.bpw-keyboard {
+  font-size: 80%;
 }
 
 .bpw-composer {
-  font-size: 0.8rem;
+  font-size: 80%;
 }
 
 .bpw-bubble-session_reset {
