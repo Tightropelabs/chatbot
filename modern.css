@@ -92,6 +92,10 @@ a {
   font-size: 80%;
 }
 
+.bpw-composer textarea {
+ font-size: .8rem; 
+}
+
 .bpw-composer {
   font-size: 80%;
 }
