@@ -105,7 +105,12 @@ a {
 }
 
 .bpw-keyboard-quick_reply {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
+}
+
+.css-10nd86i {
+  margin-bottom: 20px; 
 }
 
 .bpw-composer {
