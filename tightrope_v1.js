@@ -58,9 +58,14 @@ function init(config) {
       payload: payload
     }, '*')
   }
+  
+  function mergeConfig(payload) {
+    iframeWindow.postMessage({ action: 'mergeConfig', payload: payload }, '*')
+  }
 
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
+  window.botpressWebChat.mergeConfig = mergeConfig
   
   window.addEventListener('message', message => {
     if (message.data.userId) {
