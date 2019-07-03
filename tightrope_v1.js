@@ -9,17 +9,18 @@ function injectDOMElement(tagName, targetSelector, options) {
   return element
 }
 
-window.addEventListener('message', function (payload) {
+window.addEventListener('message', function(payload) {
   const data = payload.data
-  if (!data || !data.type || data.type !== 'setClass') {
+  if (!data || !data.type) {
     return
   }
-  document.querySelector('#bp-widget').setAttribute('class', data.value)
+
+  if (data.type === 'setClass') {
+    document.querySelector('#bp-widget').setAttribute('class', data.value)
+  } else if (data.type === 'setWidth') {
+    document.querySelector('#bp-widget').style.width = data.value
+  }
 })
-
-function reinit(config) {
-
-}
 
 function init(config) {
   const host = config.host || 'https://tightropechat.herokuapp.com'
