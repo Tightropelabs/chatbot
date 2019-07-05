@@ -23,7 +23,7 @@ window.addEventListener('message', function(payload) {
 })
 
 function init(config) {
-  const host = config.host || 'https://chat.tightropelabs.com'
+  const host = config.host || 'https://tightropechat.herokuapp.com'
   const botId = config.botId || 'tightrope'
   const brokerageId = config.brokerageId || ''
   config.extraStylesheet = config.extraStylesheet || 'https://tightropelabs.github.io/chatbot/modern.css'
