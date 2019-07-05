@@ -78,12 +78,7 @@ function init(config) {
     }
   })
   
-  window.addEventListener('message', message => {
-    const data = payload.data
-    if (!data || !data.type) {
-      return
-    }
-    
+  window.addEventListener('message', message => {    
     if (message.data.userId) {
       const userId = message.data.userId;
       const preId = userId.substr(0, 21);
