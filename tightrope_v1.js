@@ -22,7 +22,7 @@ window.addEventListener('message', function(payload) {
   }
 })
 
-function init(config) {
+function init(config) {  
   const host = config.host || 'https://chat.tightropelabs.com'
   const botId = config.botId || 'tightrope'
   const brokerageId = config.brokerageId || ''
@@ -66,16 +66,7 @@ function init(config) {
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
   window.botpressWebChat.mergeConfig = mergeConfig
-  
-  let device
-      if( screen.width <= 768 ) {     
-        device = "phone" 
-      } else if (screen.width < 1024) {
-        device = "tablet"
-      } else {
-        device = "laptop/desktop"
-      }
-  
+ 
   window.botpressWebChat.sendEvent ({
     type: 'set-brokerage',
     channel: 'web',
@@ -83,8 +74,7 @@ function init(config) {
       url: window.location.href,
       referrer: document.referrer,
       brokerage: brokerageId,
-      userAgent: navigator.userAgent,
-      deviceType: device
+      userAgent: navigator.userAgent
     }
   })
   
