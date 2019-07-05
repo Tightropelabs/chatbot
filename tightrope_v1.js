@@ -22,8 +22,8 @@ window.addEventListener('message', function(payload) {
   }
 })
 
-function init(config) {  
-  const host = config.host || 'https://chat.tightropelabs.com'
+function init(config) {
+  const host = config.host || 'https://tightropechat.herokuapp.com'
   const botId = config.botId || 'tightrope'
   const brokerageId = config.brokerageId || ''
   config.extraStylesheet = config.extraStylesheet || 'https://tightropelabs.github.io/chatbot/modern.css'
@@ -64,6 +64,25 @@ function init(config) {
   
   window.addEventListener('message', message => {
     if (message.data.userId) {
+      let device
+      if( screen.width <= 768 ) {     
+        device = "phone" 
+      } else if (screen.width < 1024) {
+        device = "tablet"
+      } else {
+        device = "laptop/desktop"
+      }
+      window.botpressWebChat.sendEvent ({
+        type: 'set-brokerage',
+        channel: 'web',
+        payload: {
+          url: window.location.href,
+          referrer: document.referrer,
+          brokerage: brokerageId,
+          userAgent: navigator.userAgent,
+          deviceType: device
+        }
+      })
       const userId = message.data.userId;
       const preId = userId.substr(0, 21);
       const postId = userId.slice(-brokerageId.length);
@@ -71,17 +90,6 @@ function init(config) {
         config.userId = preId + brokerageId;
         window.botpressWebChat = init(config)
       }
-    }
-  })
-  
-  window.botpressWebChat.sendEvent ({
-    type: 'set-brokerage',
-    channel: 'web',
-    payload: {
-      url: window.location.href,
-      referrer: document.referrer,
-      brokerage: brokerageId,
-      userAgent: navigator.userAgent
     }
   })
 }
