@@ -67,6 +67,15 @@ function init(config) {
   window.botpressWebChat.sendEvent = sendEvent
   window.botpressWebChat.mergeConfig = mergeConfig
   
+  let device
+      if( screen.width <= 768 ) {     
+        device = "phone" 
+      } else if (screen.width < 1024) {
+        device = "tablet"
+      } else {
+        device = "laptop/desktop"
+      }
+  
   window.botpressWebChat.sendEvent ({
     type: 'set-brokerage',
     channel: 'web',
@@ -81,14 +90,6 @@ function init(config) {
   
   window.addEventListener('message', message => {
     if (message.data.userId) {
-      let device
-      if( screen.width <= 768 ) {     
-        device = "phone" 
-      } else if (screen.width < 1024) {
-        device = "tablet"
-      } else {
-        device = "laptop/desktop"
-      }
       const userId = message.data.userId;
       const preId = userId.substr(0, 21);
       const postId = userId.slice(-brokerageId.length);
