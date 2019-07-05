@@ -58,27 +58,11 @@ function init(config) {
       payload: payload
     }, '*')
   }
-  
-  function mergeConfig(payload) {
-    iframeWindow.postMessage({ action: 'mergeConfig', payload: payload }, '*')
-  }
 
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
-  window.botpressWebChat.mergeConfig = mergeConfig
- 
-  window.botpressWebChat.sendEvent ({
-    type: 'set-brokerage',
-    channel: 'web',
-    payload: {
-      url: window.location.href,
-      referrer: document.referrer,
-      brokerage: brokerageId,
-      userAgent: navigator.userAgent
-    }
-  })
   
-  window.addEventListener('message', message => {    
+  window.addEventListener('message', message => {
     if (message.data.userId) {
       const userId = message.data.userId;
       const preId = userId.substr(0, 21);
@@ -87,6 +71,17 @@ function init(config) {
         config.userId = preId + brokerageId;
         window.botpressWebChat = init(config)
       }
+    }
+  })
+  
+  window.botpressWebChat.sendEvent ({
+    type: 'set-brokerage',
+    channel: 'web',
+    payload: {
+      url: window.location.href,
+      referrer: document.referrer,
+      brokerage: brokerageId,
+      userAgent: navigator.userAgent
     }
   })
 }
