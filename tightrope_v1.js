@@ -67,6 +67,18 @@ function init(config) {
   window.botpressWebChat.sendEvent = sendEvent
   window.botpressWebChat.mergeConfig = mergeConfig
   
+  window.botpressWebChat.sendEvent ({
+    type: 'set-brokerage',
+    channel: 'web',
+    payload: {
+      url: window.location.href,
+      referrer: document.referrer,
+      brokerage: brokerageId,
+      userAgent: navigator.userAgent,
+      deviceType: device
+    }
+  })
+  
   window.addEventListener('message', message => {
     if (message.data.userId) {
       let device
@@ -77,17 +89,6 @@ function init(config) {
       } else {
         device = "laptop/desktop"
       }
-      window.botpressWebChat.sendEvent ({
-        type: 'set-brokerage',
-        channel: 'web',
-        payload: {
-          url: window.location.href,
-          referrer: document.referrer,
-          brokerage: brokerageId,
-          userAgent: navigator.userAgent,
-          deviceType: device
-        }
-      })
       const userId = message.data.userId;
       const preId = userId.substr(0, 21);
       const postId = userId.slice(-brokerageId.length);
