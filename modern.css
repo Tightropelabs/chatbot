@@ -138,7 +138,7 @@ div:has(> .css-10nd86i) {
 
 @media only screen and (min-device-width : 768px) {
   .bpw-chat-container {
-    border-radius: 20px;
+    border-radius: 5px;
   }  
   
   .bpw-anim-fadeIn {
@@ -150,11 +150,11 @@ div:has(> .css-10nd86i) {
   }
   
   .bpw-keyboard {
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 5px 5px;
   }
   
   .bpw-composer {
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 5px 5px;
   }
 }
 
