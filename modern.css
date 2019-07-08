@@ -68,7 +68,7 @@ a {
   color: #FFF;
   font-size: 13px;
   font-family: 'Poppins', sans-serif;
-  border-radius: 10px 0px 10px 10px;
+  border-radius: 10px;
 }
 
 .bpw-from-bot .bpw-chat-bubble {
@@ -77,7 +77,7 @@ a {
   color: #333;
   font-size: 13px;
   font-family: 'Poppins', sans-serif;
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 10px;
 }
 
 .bpw-button {
