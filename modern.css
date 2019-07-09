@@ -154,13 +154,14 @@ div:has(> .css-10nd86i) {
   
   .bpw-anim-fadeIn {
     animation-name: slideInRight;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-fill-mode: none;
     animation-iteration-count: 1;
   }
   
   .bpw-anim-fadeOut {
-    animation-duration: 200ms;  
+    animation-duration: .5s;
+    animation-fill-mode: none;
   }
   
   .bpw-keyboard {
