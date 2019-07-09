@@ -12,6 +12,7 @@
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   padding: 0;
+  transition: width .3s, height .3s;
 }
 
 .bp-widget-widget {
