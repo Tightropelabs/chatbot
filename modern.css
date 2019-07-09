@@ -154,13 +154,13 @@ div:has(> .css-10nd86i) {
   
   .bpw-anim-fadeIn {
     animation-name: slideInRight;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
   
   .bpw-anim-fadeOut {
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-fill-mode: backwards;
   }
   
