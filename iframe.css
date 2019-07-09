@@ -51,15 +51,10 @@
     height: 75% !important;
     box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    animation-name: slideOutRight;
+    animation-name: slideInLeft;
     animation-duration: 0.5s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
-  }
-  
-  .bpw-anim-fadeOut {
-    animation-duration: .5s;
-    animation-fill-mode: both;
   }
 }
 
