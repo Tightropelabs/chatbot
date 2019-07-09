@@ -151,14 +151,12 @@ div:has(> .css-10nd86i) {
   }  
   
   .bpw-anim-fadeIn {
-    animation-name: fadein;
     animation-duration: 0.3s;
     animation-iteration-count: 1;
   }
   
   .bpw-anim-fadeOut {
-    animation-name: fadeout;
-    animation-duration: 0.1s;
+    animation-duration: 0.3s;
   }
   
   .bpw-keyboard {
@@ -168,16 +166,6 @@ div:has(> .css-10nd86i) {
   .bpw-composer {
     border-radius: 0 0 5px 5px;
   }
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
 }
 
 /* @media only screen and (max-device-width : 900px) {
