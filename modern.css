@@ -161,7 +161,7 @@ div:has(> .css-10nd86i) {
   
   .bpw-anim-fadeOut {
     animation-duration: .5s;
-    animation-fill-mode: none;
+    animation-fill-mode: backwards;
   }
   
   .bpw-keyboard {
