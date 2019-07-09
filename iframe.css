@@ -41,7 +41,7 @@
   right: 0px;
   width: 360px;
   height: 100%;
-  transition: width .3s, height .3s;
+  transition: width .1s, height .1s;
 }
 
 @media only screen and (min-device-width : 768px) {
@@ -51,7 +51,7 @@
     bottom: 36px;
     right: 45px;
     height: 75% !important;
-    box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
   }
 }
